@@ -1,4 +1,19 @@
-[tool.pytest.ini_options]
-pythonpath = ["src"]
-testpaths = ["tests"]
-addopts = "-q"
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flexbuff-cleaning"
+version = "0.1.0"
+description = "Tools for cleaning flexbuff data"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Your Name" }]
+dependencies = []
+
+[project.scripts]
+flexbuff-cleaning = "flexbuff_cleaning.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

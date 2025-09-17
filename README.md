@@ -1,19 +1,11 @@
-# flexbuff_cleaning
+# flexbuff-cleaning
 
-Tiny scaffold created for a PyCharm `.venv` project.
+Small toolkit to clean flexbuff data safely.
 
-## Quick start
+## Install (dev)
 
 ```bash
-python3 -m venv .venv
+python -m venv .venv
 source .venv/bin/activate
 pip install -U pip
-pip install -r requirements.txt
-```
-
-## Run
-```bash
-python -m flexbuff_cleaning
-# or
-python scripts/run_flexbuff_cleaning.py
-```
+pip install -e .
