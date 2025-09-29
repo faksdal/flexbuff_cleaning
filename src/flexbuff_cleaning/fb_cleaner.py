@@ -13,7 +13,7 @@ import asyncssh
 
 from typing import Sequence, Dict, List
 
-from remote_setup import DEFAULT_COMMAND, DEFAULT_USERNAME, DEFAULT_TIMEOUT
+from flexbuff_cleaning.remote_setup import DEFAULT_COMMAND, DEFAULT_USERNAME, DEFAULT_TIMEOUT
 
 
 

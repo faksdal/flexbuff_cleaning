@@ -1,3 +1,4 @@
-# Add runtime dependencies here, e.g.:
-# asyncssh==2.15.0
-# requests>=2.32
+asyncssh>=2.14.0
+
+# For testing
+pytest>=8.0.0
