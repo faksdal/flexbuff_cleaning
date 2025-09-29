@@ -31,3 +31,6 @@ htmlcov/
 # Logs / outputs
 *.log
 log/
+
+# user defines
+remote_setup.py

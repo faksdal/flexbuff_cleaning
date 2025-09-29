@@ -13,9 +13,8 @@ import asyncssh
 
 from typing import Sequence, Dict, List
 
+from remote_setup import DEFAULT_COMMAND, DEFAULT_USERNAME, DEFAULT_TIMEOUT
 
-DEFAULT_COMMAND     = 'vbs_ls -hlrt'
-DEFAULT_USERNAME    = 'oper'
 
 
 async def fetch_data(_host: str,
@@ -65,7 +64,7 @@ async def main_async(_paths: Sequence[str]) -> int:
     :return:
     """
 
-    tasks   = [fetch_data(p, DEFAULT_USERNAME, DEFAULT_COMMAND, 300) for p in _paths]
+    tasks   = [fetch_data(p, DEFAULT_USERNAME, DEFAULT_COMMAND, DEFAULT_TIMEOUT) for p in _paths]
     results = await asyncio.gather(*tasks)
 
     for r in results:
