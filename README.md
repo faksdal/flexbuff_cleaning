@@ -67,10 +67,10 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 # 4A) Run as a module (recommended)
-python -m flexbuff_cleaning 10.0.0.10 10.0.0.11
+python -m flexbuff_cleaning [IP-1] [IP-2]
 
 # 4B) Or via helper script
-./scripts/run_flexbuff_cleaning.py 10.0.0.10
+./scripts/run_flexbuff_cleaning.py [IP]
 ```
 
 Both entry points call the same `main()` function (`__main__.py` just imports the CLI).
@@ -98,19 +98,19 @@ The CLI surfaces the package version from `__init__.py`. Current version: `0.1.0
 List unique sessions on two hosts:
 
 ```bash
-python -m flexbuff_cleaning 10.0.109.33 10.0.109.34
+python -m flexbuff_cleaning [IP-1] [IP-2]
 ```
 
 Dry-run (no changes—currently listing is read-only anyway, but this flag is future-proofing for actual cleaning actions):
 
 ```bash
-python -m flexbuff_cleaning --dry-run 10.0.109.33
+python -m flexbuff_cleaning --dry-run [IP-1]
 ```
 
 ### Output (sample)
 
 ```
-Host: 10.0.109.33
+Host: [IP-1] [IP-2]
 TOTAL: <first line from remote command>
 Found 7 unique sessions:
     • r4873_r1
