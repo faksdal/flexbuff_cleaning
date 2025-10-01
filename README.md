@@ -61,16 +61,18 @@ cd flexbuff_cleaning
 
 # 2) Create & activate venv
 python3 -m venv .venv
-source .venv/bin/activate
 
 # 3) Install deps
 pip install -r requirements.txt
 
-# 4A) Run as a module (recommended)
+# 4) Run as a module (recommended)
+cd ~/projects/flexbuff_cleaning
+source .venv/bin/activate
+pip install -e .
 python -m flexbuff_cleaning [IP-1] [IP-2]
 
-# 4B) Or via helper script
-./scripts/run_flexbuff_cleaning.py [IP]
+
+
 ```
 
 Both entry points call the same `main()` function (`__main__.py` just imports the CLI).
